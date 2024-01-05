@@ -6,6 +6,7 @@ export RUST_LOG := project + "=trace"
 default:
     just --list
 
+{% raw %}
 dev *args:
     cargo run -- {{args}}
 
@@ -18,6 +19,7 @@ test *args:
 fix:
     cargo fix -p {{project}} --allow-dirty --allow-staged
     cargo clippy --fix -p {{project}} --allow-dirty --allow-staged
+{% endraw %}
 
 fmt:
     cargo fmt
