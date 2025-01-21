@@ -1,4 +1,4 @@
-use color_eyre::Result;
+pub use color_eyre::Result as Result;
 
 pub fn setup() -> Result<()> {
     use tracing_subscriber::{fmt, prelude::*, EnvFilter};
